@@ -10,7 +10,7 @@ import subprocess
 
 
 class Backuper(object):
-    parent_dir = os.path.expanduser('~/iCloud/Backups/Daily')
+    parent_dir = os.path.expanduser('~/Library/Mobile Documents/com~apple~CloudDocs/Backups/Daily')
 
     def __init__(self, basename='backup'):
         self.dir = os.path.join(self.parent_dir, datetime.date.today().isoformat())
