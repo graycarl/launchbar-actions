@@ -36,7 +36,7 @@ class Backuper(object):
 
     def __enter__(self):
         self._ensure_dir()
-        self.zipfile = zipfile.ZipFile(self.zipfn, 'w')
+        self.zipfile = zipfile.ZipFile(self.zipfn, 'w', compression=zipfile.ZIP_DEFLATED)
         return self
 
     def __exit__(self, *args, **kwargs):
